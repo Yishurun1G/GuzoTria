@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer base{
+    :root{
+        --primary-color: rgb(0, 221, 0); 
+        --secondary-color: rgb(30, 30, 30); 
+        --secondary-color-light: rgb(147, 146, 146); 
+    }
+
+    body{
+        font-size: 62.5%;
+    }
+}
