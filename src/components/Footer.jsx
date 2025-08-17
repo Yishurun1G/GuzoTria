@@ -47,7 +47,7 @@ export default function Footer(){
 
           <div className="mt-[2rem]">
             <h1 className="mb-[2rem]">Download the free app</h1>
-            <div className="flex gap-4 lg:gap-2">
+            <div className="flex flex-col min-[500px]:flex-row gap-4 lg:gap-2">
               <FooterStore 
                 Icon={FaGooglePlay} 
                 upperText="Get it on" 
