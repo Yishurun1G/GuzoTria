@@ -1,11 +1,11 @@
-import Navbar from '../components/Navbar.jsx';
-import Footer from '../components/Footer.jsx';
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 export default function Home(){
     return(
-        <>
-            <Navbar />
-            <Footer />
-        </>
+      <>
+        <Navbar />
+        <Footer />
+      </>
     )
 }

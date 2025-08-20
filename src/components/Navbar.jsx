@@ -1,14 +1,32 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { FaBicycle, FaBars, FaTimes } from "react-icons/fa";
+// import Logo from "../assets/images/Logo.svg";
 
-import NavbarLinks from "./NavbarLinks";
+function NavbarLinks({isOpen}){
+  const links = [
+    {name: "About us", to: "/about"},
+    {name: "Scooters", to: "/scooters"},
+    {name: "Locations", to: "/locations"},
+    {name: "Blog", to: "/blog"},
+  ]
 
+  return(
+    <>
+      { 
+        links.map((link, index) => (
+          <li className={`hover:text-[var(--secondary-color-light)] ${isOpen ? "last:mb-5" : ""} transition-all cursor-pointer`} key={index}>
+            <NavLink to={link.to}>{link.name}</NavLink>
+          </li>
+        ))
+      }
+    </>
+  )
+}
+
+/* ==================================== Navbar Start ==================================== */
 export default function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
-
-  function handleClick(){
-    setIsOpen(!isOpen);
-  }
 
   return(
     <nav>
@@ -16,16 +34,18 @@ export default function Navbar(){
         <div className="flex items-center justify-between">
           <div className="flex gap-3 text-4xl text-[var(--primary-color)]">
             <FaBicycle /> Guzo  
+            {/* <img src={Logo} alt="Logo" className="text-2xl" /> */}
           </div>
 
           <div>
-            <div className="">
-              <div className="lg:hidden" onClick={handleClick}>
+            <div>
+              <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
                 { isOpen ?
                 <FaTimes className="text-3xl" /> :
                 <FaBars className="text-3xl" /> 
                 }
               </div>
+
               <div>
                 {/* For Desktop View */} 
                 <ul className="hidden lg:flex items-center gap-[2rem] text-xl xl:gap-[3rem] xl:text-2xl">
@@ -36,9 +56,8 @@ export default function Navbar(){
                 <ul 
                 className={`absolute lg:hidden top-24 left-0 w-full bg-white text-xl flex flex-col items-center gap-6 transition-all duration-300 ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}
                 >
-                    <NavbarLinks isOpen={isOpen} />
+                  <NavbarLinks isOpen={isOpen} />
                 </ul>
-
               </div>              
             </div>
           </div>
@@ -47,3 +66,4 @@ export default function Navbar(){
     </nav>
   )
 }
+/* ==================================== Navbar End ==================================== */
