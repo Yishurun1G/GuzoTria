@@ -56,11 +56,10 @@ function FooterStore({Icon, upperText, upperTextStyle, lowerText, lowerTextStyle
 /* ==================================== Footer Start ==================================== */
 export default function Footer(){
   return(
-    <footer className="bg-[var(--secondary-color)] text-white py-[10rem]">
+    <footer className="bg-[var(--primary-color)] text-white py-[10rem] mt-[5rem]">
       <div className="grid grid-cols-1 gap-4 px-[2rem] lg:grid-cols-[1fr_1fr_1fr_1fr_auto] lg:gap-2">
-        <div className="flex gap-3 text-4xl text-[var(--primary-color)] mb-[3rem]">
+        <div className="flex gap-3 text-4xl text-white mb-[3rem]">
           <FaBicycle /> Guzo  
-          {/* <img src={Logo} alt="logo" className="w-[15rem] h-[15rem]" /> */}
         </div>
 
         <FooterAccordionItem
