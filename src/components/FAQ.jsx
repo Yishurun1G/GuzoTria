@@ -4,13 +4,13 @@ import { FaBiking, FaChevronDown, FaEnvira, FaTachometerAlt } from "react-icons/
 function SafetyGrid({ Icon, title, detail }) {
   return (
     <>
-      <div className="text-3xl text-[var(--secondary-color)]">
+      <div className="text-3xl text-blue-700">
         <Icon />
       </div>
 
       <div>
         <h3 className="text-xl font-bold">{title}</h3>
-        <p className="text-lg text-black/50">{detail}</p>
+        <p className="text-lg">{detail}</p>
       </div>
     </>
   )
@@ -20,9 +20,9 @@ function FAQLists({question, answer}){
   const [isOpen, setIsOpen] = useState(false);
 
   return(
-    <div className="border-b-3 border-black/30 mb-5 cursor-pointer">
+    <div className="border-b-3 border-white/30 mb-5 cursor-pointer">
       <div 
-        className="flex items-center justify-between text-lg text-black/60 font-semibold"
+        className="flex items-center justify-between text-lg font-semibold"
         onClick={() => setIsOpen(!isOpen)}>
         <div className="mb-2">
           <p>{question}</p>
@@ -34,7 +34,7 @@ function FAQLists({question, answer}){
       </div>
 
       <div className={`overflow-hidden transition-all duration-200 ease-in-out text-lg ${isOpen ? "max-h-40 opacity-100 mb-3" : "max-h-0 opacity-0"}`}>
-        {answer}
+        ➔ {answer}
       </div>
     </div>
   )
@@ -43,8 +43,8 @@ function FAQLists({question, answer}){
 /* ==================================== Safety & FAQ Start ==================================== */
 export default function FAQ() {
   return (
-    <section className="pt-[5rem]">
-      <div className="w-[90%] mx-auto bg-gray-100 p-10 rounded-lg">
+    <section className=" bg-[var(--bg-tertiary)]">
+      <div className="w-[90%] mx-auto p-10 text-white">
         <div className="my-[5rem]">
           <h1 className="capitalize text-5xl text-center font-bold">Safety & FAQ's</h1>
         </div>

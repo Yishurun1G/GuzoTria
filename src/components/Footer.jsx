@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBicycle, FaTwitter, FaFacebook, FaLinkedin, FaYoutube, FaInstagram, FaGooglePlay, FaApple, FaChevronDown, FaChevronUp } from "react-icons/fa";
-// import Logo from "../assets/images/Logo.svg";
 
 function FooterAccordionItem({title, items}){
   const [isOpen, setIsOpen] = useState(false);
@@ -30,10 +29,10 @@ function FooterAccordionItem({title, items}){
   )
 }
 
-function FooterSocials({Icon}){
+function FooterSocials({Icon, color="#000000"}){
   return(
     <button>
-      <Icon className="bg-white p-2 rounded-full cursor-pointer" />
+      <Icon className="bg-white p-2 rounded-full cursor-pointer" style={{color}} />
     </button>
   )
 }
@@ -41,7 +40,7 @@ function FooterSocials({Icon}){
 function FooterStore({Icon, upperText, upperTextStyle, lowerText, lowerTextStyle}) {
   return(
     <button 
-    className="flex items-center gap-3 cursor-pointer py-0.5 px-3 rounded-lg bg-white text-[var(--secondary-color)]
+    className="flex items-center gap-3 cursor-pointer py-0.5 px-3 rounded-lg bg-white text-black
     lg:gap-2 hover:bg-[var(--primary-color)] hover:text-white transition-all duration-300 ease-in-out">
       <Icon className="text-3xl" /> 
       
@@ -56,7 +55,7 @@ function FooterStore({Icon, upperText, upperTextStyle, lowerText, lowerTextStyle
 /* ==================================== Footer Start ==================================== */
 export default function Footer(){
   return(
-    <footer className="bg-[var(--primary-color)] text-white py-[10rem] mt-[5rem]">
+    <footer className="bg-[var(--bg-tertiary)] text-white py-[10rem] mt-[5rem]">
       <div className="grid grid-cols-1 gap-4 px-[2rem] lg:grid-cols-[1fr_1fr_1fr_1fr_auto] lg:gap-2">
         <div className="flex gap-3 text-4xl text-white mb-[3rem]">
           <FaBicycle /> Guzo  
@@ -104,11 +103,11 @@ export default function Footer(){
           </div>
           
           <div className="flex items-center gap-3 text-[var(--secondary-color)] text-4xl mt-[2rem] lg:gap-7">
-            <FooterSocials Icon={FaTwitter} />
-            <FooterSocials Icon={FaFacebook} />
-            <FooterSocials Icon={FaLinkedin} />
-            <FooterSocials Icon={FaYoutube} />
-            <FooterSocials Icon={FaInstagram} />
+            <FooterSocials Icon={FaTwitter} color="#0000FF" />
+            <FooterSocials Icon={FaFacebook} color="#0000FF" />
+            <FooterSocials Icon={FaLinkedin} color="#0000FF" />
+            <FooterSocials Icon={FaYoutube} color="#FF0000" />
+            <FooterSocials Icon={FaInstagram} color="#E1306C" />
           </div>
 
           <div className="mt-[2rem]">
@@ -127,7 +126,7 @@ export default function Footer(){
                 upperText="Download on the" 
                 upperTextStyle="text-xs self-start uppercase" 
                 lowerText="App Store" 
-                lowerTextStyle="text-xl font-extrabold self-start uppercase"
+                lowerTextStyle="text-lg font-extrabold self-start uppercase"
               />
             </div>            
           </div>          

@@ -7,7 +7,7 @@ export default function Hero({children}){
       id="hero"
       className="relative w-full h-[100vh] bg-cover bg-center text-white"
       style={{backgroundImage: `url(${scooterImage})`}}>
-      <div className="absolute inset-0 bg-black/50">
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black/90">
         {children}
         <div className="flex flex-col items-center justify-center h-full text-center mt-[7rem]">
         

@@ -2,13 +2,20 @@
 
 @layer base{
     :root{
-        --primary-color: rgb(20, 20, 20); 
-        --secondary-color: rgb(0, 56, 211); 
+        --primary-color: #000000; 
+        /* --secondary-color: #A6D1FF;  */
+        --secondary-color: #0000ff; 
         --secondary-color-light: rgb(147, 146, 146); 
+        /* ACC8E5 */
+
+        --bg-primary: #000000;
+        --bg-secondary: #171A1F;
+        --bg-tertiary: #1E2128;
     }
 
     body{
         font-size: 62.5%;
         font-family: 'Montserrat', sans-serif;
+        background-color: var(--bg-primary);
     }
 }

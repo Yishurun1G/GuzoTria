@@ -4,7 +4,7 @@ import testimony3 from "../assets/images/testimony-3.jpg"
 
 function TestimonialList({name, testimony, image}){
   return(
-    <div className={`bg-white p-4 rounded-lg max-w-[25%] flex-1`}>
+    <div className={`bg-[var(--bg-tertiary)] p-4 rounded-lg max-w-[25%] border-2 border-white flex-1`}>
       <div className="grid place-items-center mt-5 mb-7">
         <div className="w-12 h-12 overflow-hidden rounded-full ">
           <img src={image} alt="testimonies" />
@@ -23,8 +23,8 @@ function TestimonialList({name, testimony, image}){
 /* ==================================== Testimonial Start ==================================== */
 export default function Testimonial(){
   return(
-    <section className="pt-[5rem]">
-      <div className="w-[90%] mx-auto">
+    <section>
+      <div className="w-[90%] mx-auto text-white">
         <div className="my-[5rem]">
           <h1 className="capitalize text-5xl text-center font-bold">What our riders say</h1>
         </div>

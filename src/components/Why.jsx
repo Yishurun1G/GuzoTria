@@ -3,15 +3,15 @@ import { FaPlug, FaShieldAlt, FaLeaf, FaExclamationCircle } from "react-icons/fa
 
 function WhyList({Icon, title, text}){
   return(
-    <div className={`bg-white p-4 rounded-lg max-w-[25%] border-3 border-black/10 flex-1`}>
-      <div className="inline-flex items-center justify-center text-[var(--secondary-color)] mt-5 mb-7">
+    <div className={`bg-[var(--bg-tertiary)] p-4 rounded-lg max-w-[25%] border-2 border-white flex-1`}>
+      <div className="inline-flex items-center justify-center text-blue-700 mt-5 mb-7">
         <Icon className="text-5xl" />              
       </div>
       <div className="mb-3">
         <h2 className="text-3xl font-semibold">{title}</h2>
       </div>
       <div className="mb-3">
-        <p className="text-xl text-black/50">{text}</p>
+        <p className="text-xl">{text}</p>
       </div>
     </div>
   )
@@ -20,8 +20,8 @@ function WhyList({Icon, title, text}){
 /* ==================================== Why Start ==================================== */
 export default function Why(){
   return(
-    <section className="pt-[5rem]">
-      <div className="w-[90%] mx-auto">
+    <section>
+      <div className="w-[90%] mx-auto text-white">
         <div className="my-[5rem]">
           <h1 className="capitalize text-5xl text-center font-bold">Why Choose Guzo?</h1>
         </div>

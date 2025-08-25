@@ -2,16 +2,16 @@ import { FiSearch, FiRotateCcw, FiLock } from "react-icons/fi";
 
 function HowList({Icon, title, text}){
   return(
-    <div className="bg-white text-center p-4 rounded-lg max-w-[25%]">
+    <div className="bg-[var(--bg-tertiary)] border-2 border-white text-center p-4 rounded-lg max-w-[25%]">
       <div 
-        className="inline-flex items-center justify-center p-4 bg-blue-100 rounded-full text-[var(--secondary-color)] mt-5 mb-7">
+        className="inline-flex items-center justify-center p-4 bg-blue-100 rounded-full text-blue-700 mt-5 mb-7">
         <Icon className="text-5xl" />              
       </div>
       <div className="mb-3">
         <h2 className="text-3xl font-semibold">{title}</h2>
       </div>
       <div className="mb-3">
-        <p className="text-xl text-black/50">{text}</p>
+        <p className="text-xl">{text}</p>
       </div>
     </div>
   )
@@ -20,13 +20,13 @@ function HowList({Icon, title, text}){
 /* ==================================== How Start ==================================== */
 export default function How(){
   return(
-    <section className="pt-[10rem]">
-      <div className="w-[90%] mx-auto bg-gray-100 p-10 rounded-lg">
+    <section className=" bg-[var(--bg-secondary)]">
+      <div className="w-[90%] mx-auto text-white p-10 rounded-lg">
         <div className="my-[5rem]">
           <h1 className="capitalize text-5xl text-center font-bold">How it works</h1>
         </div>
 
-        <div className="flex items-center justify-around gap-5 mb-[5rem]">
+        <div className="flex items-stretch justify-around gap-5 mb-[5rem]">
           <HowList 
             Icon={FiSearch} 
             title="Find a GuzoDot" 

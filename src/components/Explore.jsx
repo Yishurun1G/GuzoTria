@@ -2,8 +2,8 @@ import Button from "./Button";
 
 export default function Explore(){
   return(
-    <section className="pt-[5rem]">
-      <div className="bg-[var(--primary-color)] w-[55%] mx-auto text-white rounded-2xl py-[5rem] px-[5rem]">
+    <section>
+      <div className="bg-[var(--bg-tertiary)] w-[55%] mx-auto text-white rounded-2xl p-[5rem] border-3 border-white">
         <div className="flex flex-col items-center justify-center">
           <div className="text-center mb-7">
             <h1 className="text-5xl font-bold">Ready to Explore Your City with Guzo?</h1>

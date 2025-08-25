@@ -1,4 +1,4 @@
-function Button({name="Click Me", type="primary", textSize="text-base", padding="py-2 px-4", font="font-normal"}){
+function Button({name="Click Me", type="primary", textSize="text-base", padding="py-2 px-4", font="font-normal", block=""}){
   let bgColor, textColor;
 
   switch (type) {
@@ -21,7 +21,7 @@ function Button({name="Click Me", type="primary", textSize="text-base", padding=
 
   return (
     <button
-    className={`${bgColor} ${textColor} ${textSize} ${padding} ${font} rounded-lg transition cursor-pointer`}>
+    className={`${bgColor} ${textColor} ${textSize} ${padding} ${font} ${block} rounded-lg transition cursor-pointer`}>
       {name}
     </button>
   );

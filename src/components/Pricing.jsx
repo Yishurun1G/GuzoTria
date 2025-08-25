@@ -6,8 +6,8 @@ function PricingListDetails({lists}){
     <div className="flex flex-col">
       { lists.map((list) => (
           <div className="flex items-center gap-2 mb-2">
-            <FaCheck className="text-sm text-[var(--secondary-color)]" /> 
-            <p className="text-lg text-black/80">{list}</p>
+            <FaCheck className="text-sm text-blue-700" /> 
+            <p className="text-lg">{list}</p>
           </div>
         ))  
       }
@@ -17,7 +17,7 @@ function PricingListDetails({lists}){
 
 function PricingList({lists, plan, amount}){
   return(
-    <div className="bg-white p-4 rounded-lg max-w-[25%]">
+    <div className="bg-[var(--bg-tertiary)] p-4 rounded-lg max-w-[25%] border-2 border-white">
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-1">{plan}</h2>
         <h1 className="text-4xl font-bold">{amount}</h1>
@@ -28,7 +28,7 @@ function PricingList({lists, plan, amount}){
       />
 
       <div className="mt-7">
-        <Button name="Choose Plan" />
+        <Button name="Choose Plan" block="w-full" />
       </div>
     </div>
   )
@@ -37,8 +37,8 @@ function PricingList({lists, plan, amount}){
 /* ==================================== Pricing Start ==================================== */
 export default function Pricing(){
   return(
-    <section className="pt-[5rem]">
-      <div className="w-[90%] mx-auto bg-gray-100 p-10 rounded-lg">
+    <section className="bg-[var(--bg-secondary)]">
+      <div className="w-[90%] mx-auto text-white p-10 rounded-lg">
         <div className="my-[5rem]">
           <h1 className="capitalize text-5xl text-center font-bold">Flexible pricing plans</h1>
         </div>
