@@ -7,6 +7,7 @@ import Location from './pages/Location.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import Scooters from './pages/Scooters.jsx';
 import Signup from './pages/Signup.jsx';
+import Login from './pages/Login.jsx';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/location" element={<Location />} />
         <Route path="/scooters" element={<Scooters />} />
         <Route path="/signup" element={<Signup />} />
+         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
