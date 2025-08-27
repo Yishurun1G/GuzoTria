@@ -1,3 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@layer base{
+    :root{
+        --primary-color: rgb(20, 20, 20); 
+        --secondary-color: rgb(0, 56, 211); 
+        --secondary-color-light: rgb(147, 146, 146); 
+    }
+
+    body{
+        font-size: 62.5%;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
