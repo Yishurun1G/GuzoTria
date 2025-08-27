@@ -62,36 +62,34 @@ export default function Footer(){
         </div>
 
         <FooterAccordionItem
-          title="Join us"
+          title="Product"
           items={[
-            {name: "Careers", to: "join-us/careers"},
-            {name: "Lime Time Blog", to: "join-us/blog"},
-            {name: "Press", to: "join-us/press"},
-            {name: "Partners", to: "join-us/partners"}
+            {name: "How it works", to: "product/how-it-works"},
+            {name: "Pricing", to: "product/pricing"},
+            {name: "Guzo Locations", to: "locations"},
+            {name: "Safety", to: "product/safety"}
           ]}
         />
 
         <FooterAccordionItem
-          title="About"
+          title="Company"
           items={[
-            {name: "Community", to: "about/community"},
-            {name: "E-Bike", to: "about/e-bike"},
-            {name: "E-Scooter", to: "about/e-scooter"}, 
-            {name: "Sustainability", to: "about/sustainability"},
-            {name: "Innovation", to: "about/innovation"},
-            {name: "Safety", to: "about/safety"}
+            {name: "About us", to: "/about"},
+            {name: "Careers", to: "company/careers"},
+            {name: "E-Scooter", to: "company/e-scooter"}, 
+            {name: "Partnership", to: "company/partnership"},
+            {name: "Blog", to: "/blog"},
           ]}
         />
 
         <FooterAccordionItem
-          title="Programs"
+          title="Resources"
           items={[
-            {name: "Advertise", to: "programs/advertise"},
-            {name: "Lime Access", to: "programs/lime-access"},
-            {name: "Lime Hero", to: "programs/lime-hero"},
-            {name: "Lime Assist", to: "programs/lime-assist"},
-            {name: "Insurance", to: "programs/insurance"},
-            {name: "Our Cities", to: "programs/our-cities"}
+            {name: "Help Center", to: "/help"},
+            {name: "FAQ's", to: "resources/faq"},
+            {name: "Support", to: "resources/support"},
+            {name: "Contact Us", to: "resources/contact-us"},
+            {name: "Our Cities", to: "resources/our-cities"}
           ]}
         />        
 
