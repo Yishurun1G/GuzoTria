@@ -7,10 +7,15 @@ import Location from './pages/Location.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import Scooters from './pages/Scooters.jsx';
 import Signup from './pages/Signup.jsx';
+import Navbar from './components/Navbar.jsx';
 
 export default function App() {
   return (
     <BrowserRouter>
+    
+              <Navbar/>
+            
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

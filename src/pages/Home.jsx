@@ -14,9 +14,7 @@ import Why from "../components/Why";
 export default function Home(){
     return(
       <>
-        <Hero>
-          <Navbar />
-        </Hero> 
+        <Hero/>
         <How />
         <Why />
         <Map />
