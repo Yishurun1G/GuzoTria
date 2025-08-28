@@ -8,6 +8,7 @@ import PageNotFound from './pages/PageNotFound.jsx';
 import Scooters from './pages/Scooters.jsx';
 import Signup from './pages/Signup.jsx';
 import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer />
+      <Footer/>
     </BrowserRouter>
   );
 }

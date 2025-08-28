@@ -22,7 +22,7 @@ function ScooterCard({ scooter, userLoggedIn }) {
         <img
           src={scooter.image}
           alt={scooter.name}
-          className="w-full h-40 object-cover"
+          className="w-full h-40 object-contain bg-white"
         />
       </div>
 
