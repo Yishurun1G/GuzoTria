@@ -1,5 +1,14 @@
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 export default function Scooters(){
   return(
-    <h1>Scooters</h1>
+    <>
+      <Navbar />
+      <section className="flex items-center justify-center h-[100vh]">
+        <h1 className="text-5xl text-white font-bold">Scooters</h1>
+      </section>
+      <Footer />
+    </>
   )
 }

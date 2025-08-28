@@ -54,9 +54,9 @@ export default function Navbar() {
     >
       <div className="w-[90%] mx-auto p-[2rem]">
         <div className="flex items-center justify-between">
-          <div className="flex gap-3 text-4xl">
+          <NavLink className="flex gap-3 text-4xl cursor-pointer" to="/">
             <FaBicycle /> Guzo
-          </div>
+          </NavLink>
 
           {/* Mobile Toggle */}
           <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>

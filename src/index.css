@@ -3,10 +3,8 @@
 @layer base{
     :root{
         --primary-color: #000000; 
-        /* --secondary-color: #A6D1FF;  */
         --secondary-color: #0000ff; 
         --secondary-color-light: rgb(147, 146, 146); 
-        /* ACC8E5 */
 
         --bg-primary: #000000;
         --bg-secondary: #171A1F;
