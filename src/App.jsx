@@ -13,9 +13,7 @@ export default function App() {
   return (
     <BrowserRouter>
     
-              <Navbar/>
-            
-
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -25,6 +23,7 @@ export default function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

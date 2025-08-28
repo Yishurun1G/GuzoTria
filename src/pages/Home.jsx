@@ -24,7 +24,7 @@ export default function Home(){
         <FAQ />
         <Sustainability />
         <Explore />
-        <Footer />
+        
       </>
     )
 }
