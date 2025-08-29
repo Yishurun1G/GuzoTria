@@ -10,6 +10,7 @@ function NavbarLinks({isOpen}){
     {name: "Scooters", to: "/scooters"},
     {name: "Locations", to: "/locations"},
     {name: "Blog", to: "/blog"},
+    
   ]
 
   return(
@@ -70,12 +71,14 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="hidden lg:flex items-center gap-[2rem] text-xl xl:gap-[3rem] xl:text-2xl">
             <NavbarLinks />
-            <Button name="Sign up" type="primary" textSize="text-2xl" />
+            <NavLink to="/signup">
+                <Button name="Sign up" type="primary" textSize="text-2xl" />
+            </NavLink>
           </ul>
 
           {/* Mobile Menu */}
           <ul
-            className={`absolute lg:hidden top-24 left-0 w-full bg-white text-xl flex flex-col items-center gap-6 transition-all duration-300 ${
+            className={`absolute lg:hidden top-24 left-0 w-full bg-white text-black text-xl flex flex-col items-center gap-6 transition-all duration-300 ${
               isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
             }`}
           >

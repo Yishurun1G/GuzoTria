@@ -7,14 +7,11 @@ import Locations from './pages/Locations.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import Scooters from './pages/Scooters.jsx';
 import Signup from './pages/Signup.jsx';
-import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer.jsx';
+import Login from './pages/Login.jsx';
 
 export default function App() {
   return (
     <BrowserRouter>
-    
-      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
@@ -22,9 +19,9 @@ export default function App() {
         <Route path="/locations" element={<Locations />} />
         <Route path="/scooters" element={<Scooters />} />
         <Route path="/signup" element={<Signup />} />
+         <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      <Footer/>
     </BrowserRouter>
   );
 }

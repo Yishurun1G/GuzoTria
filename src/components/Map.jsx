@@ -7,7 +7,7 @@ export default function Why(){
       <div className="w-[90%] mx-auto text-white p-10 rounded-lg">
         <div className="my-[5rem] text-center">
           <h1 className="capitalize text-5xl font-bold mb-7">Interactive map</h1>
-          <p className="text-xl w-[43%] mx-auto">Find Guzo scooters and designated parking zones in real-time. Your next ride is just a tap away.</p>
+          <p className="text-xl w-full md:w-[70%] lg:w-[43%] mx-auto">Find Guzo scooters and designated parking zones in real-time. Your next ride is just a tap away.</p>
         </div>
 
         <div className="flex items-center justify-center mb-[5rem]">

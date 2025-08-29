@@ -1,5 +1,5 @@
-import scooter1 from "../assets/images/scooter1.webp";
-import scooter2 from "../assets/images/scooter2.webp";
+import scooter1 from "../assets/images/scooters/scooter1.webp";
+import scooter2 from "../assets/images/scooters/scooter2.webp";
 
 const mockScooters = [
   { id: 1, name: "Xiaomi Pro 2", image: scooter1, battery: 85, range: "40km", pricePerMin: 0.20, partner: "Bird" },
