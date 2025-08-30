@@ -10,6 +10,7 @@ function NavbarLinks({isOpen}){
     {name: "Scooters", to: "/scooters"},
     {name: "Locations", to: "/locations"},
     {name: "Blog", to: "/blog"},
+    
   ]
 
   return(
@@ -70,7 +71,9 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="hidden lg:flex items-center gap-[2rem] text-xl xl:gap-[3rem] xl:text-2xl">
             <NavbarLinks />
-            <Button name="Sign up" type="primary" textSize="text-2xl" />
+            <NavLink to="/signup">
+                <Button name="Sign up" type="primary" textSize="text-2xl" />
+            </NavLink>
           </ul>
 
           {/* Mobile Menu */}
