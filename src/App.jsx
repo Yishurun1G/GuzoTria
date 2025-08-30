@@ -9,9 +9,14 @@ import Scooters from './pages/Scooters.jsx';
 import Signup from './pages/Signup.jsx';
 import Login from './pages/Login.jsx';
 
+import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
+
 export default function App() {
   return (
     <BrowserRouter>
+    
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -22,6 +27,7 @@ export default function App() {
          <Route path="/login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
