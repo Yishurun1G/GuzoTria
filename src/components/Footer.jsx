@@ -19,7 +19,7 @@ function FooterAccordionItem({title, items}){
       lg:max-h-full lg:overflow-visible lg:mt-5 lg:gap-5`}>
         {
           items.map((item, index) => (
-            <p key={index}>
+            <p key={index} className="hover:text-white transition-colors duration-300 ease-in-out">
               <Link to={item.to}>{item.name}</Link>
             </p>          
           ))

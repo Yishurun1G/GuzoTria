@@ -1,5 +1,5 @@
-import map from "../assets/images/landingPage/map.png";
-import Button from "./Button"
+import map from "../../assets/images/landingPage/map.png";
+import Button from "../Button"
 
 export default function Why(){
   return(

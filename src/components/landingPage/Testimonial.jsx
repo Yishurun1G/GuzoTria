@@ -1,6 +1,6 @@
-import testimony1 from "../assets/images/landingPage/testimony-1.jpg";
-import testimony2 from "../assets/images/landingPage/testimony-2.jpg";
-import testimony3 from "../assets/images/landingPage/testimony-3.jpg";
+import testimony1 from "../../assets/images/landingPage/testimony-1.jpg";
+import testimony2 from "../../assets/images/landingPage/testimony-2.jpg";
+import testimony3 from "../../assets/images/landingPage/testimony-3.jpg";
 
 function TestimonialList({ name, testimony, image }) {
   return (

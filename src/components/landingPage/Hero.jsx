@@ -1,5 +1,5 @@
-import scooterImage from "../assets/images/landingPage/scooter.jpg";
-import Button from "./Button";
+import scooterImage from "../../assets/images/landingPage/scooter.jpg";
+import Button from "../Button";
 
 export default function Hero({children}){
   return(

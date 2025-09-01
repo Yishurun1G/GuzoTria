@@ -1,5 +1,5 @@
 import { FaCheck } from "react-icons/fa";
-import Button from "./Button";
+import Button from "../Button";
 
 function PricingListDetails({ lists }) {
   return (

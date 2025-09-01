@@ -2,18 +2,7 @@ import { FaBolt, FaCarSide, FaCloud } from "react-icons/fa6";
 
 function SustainabilityList({ Icon, title, text }) {
   return (
-    <div className="
-      bg-[var(--bg-tertiary)]
-      text-center
-      p-5 md:p-6 lg:p-7
-      rounded-lg
-      w-full sm:w-[80%] md:w-[48%] lg:w-[32%] xl:w-[30%]
-      max-w-[400px]
-      border-2 border-white
-      flex-1
-      shadow-lg
-      transition-transform duration-300 hover:scale-105
-    ">
+    <div className="bg-[var(--bg-tertiary)] text-center p-5 md:p-6 lg:p-7 rounded-lg w-full sm:w-[80%] md:w-[48%] lg:w-[32%] xl:w-[30%] max-w-[400px] border-2 border-white flex-1 shadow-lg transition-transform duration-300 hover:scale-105">
       <div className="inline-flex items-center justify-center p-4 bg-blue-100 rounded-full text-blue-700 mt-5 mb-7">
         <Icon className="text-5xl md:text-6xl lg:text-6xl xl:text-7xl" />
       </div>

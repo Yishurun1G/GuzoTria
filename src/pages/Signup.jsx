@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Signup() {
   const [role, setRole] = useState("user");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const [formData, setFormData] = useState({ name: "", email: "", password: ""});
   const [errors, setErrors] = useState({});
 
   // Validation rules
@@ -55,10 +51,7 @@ export default function Signup() {
     setErrors({});
   };
 
-  const isFormValid =
-    formData.name.trim() &&
-    formData.email.trim() &&
-    formData.password.trim();
+  const isFormValid = formData.name.trim() && formData.email.trim() && formData.password.trim();
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-skyblue px-4 text-lg bg-gray-100">
@@ -71,11 +64,8 @@ export default function Signup() {
           {/* Role Selector */}
           <div>
             <label className="block text-navy font-medium mb-1">Register As</label>
-            <select
-              value={role}
-              onChange={(e) => setRole(e.target.value)}
-              className="w-full p-2 border border-skyblue rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-teal"
-            >
+            <select value={role} onChange={(e) => setRole(e.target.value)}
+            className="w-full p-2 border border-skyblue rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-teal">
               <option value="user">User</option>
               <option value="owner">Scooter Owner</option>
             </select>
@@ -83,12 +73,7 @@ export default function Signup() {
 
           {/* Name */}
           <div>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Full Name"
+            <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Full Name"
               className="w-full p-2 border border-skyblue rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
@@ -96,12 +81,7 @@ export default function Signup() {
 
           {/* Email */}
           <div>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Email Address"
+            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address"
               className="w-full p-2 border border-skyblue rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
@@ -109,13 +89,8 @@ export default function Signup() {
 
           {/* Password */}
           <div>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Password"
-              className="w-full p-2 border border-skyblue rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-teal"
+            <input type="password" name="password" value={formData.password} onChange={handleChange}      placeholder="Password"
+            className="w-full p-2 border border-skyblue rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-teal"
             />
             {errors.password && (
               <p className="text-red-500 text-sm mt-1">{errors.password}</p>
@@ -123,9 +98,7 @@ export default function Signup() {
           </div>
 
           {/* Submit */}
-          <button
-            type="submit"
-            disabled={!isFormValid}
+          <button type="submit" disabled={!isFormValid}
             className={`w-full py-2 rounded-lg font-semibold transition ${
               isFormValid
                 ? "bg-black text-white hover:bg-navy"

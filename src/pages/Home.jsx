@@ -1,15 +1,15 @@
-import AppPreview from "../components/AppPreview";
-import Explore from "../components/Explore";
-import FAQ from "../components/FAQ";
+import AppPreview from "../components/landingPage/AppPreview";
+import Explore from "../components/landingPage/Explore";
+import FAQ from "../components/landingPage/FAQ";
 import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import How from "../components/How";
-import Map from "../components/Map";
+import Hero from "../components/landingPage/Hero";
+import How from "../components/landingPage/How";
+import Map from "../components/landingPage/Map";
 import Navbar from "../components/Navbar";
-import Pricing from "../components/Pricing";
-import Sustainability from "../components/Sustainability";
-import Testimonial from "../components/Testimonial";
-import Why from "../components/Why";
+import Pricing from "../components/landingPage/Pricing";
+import Sustainability from "../components/landingPage/Sustainability";
+import Testimonial from "../components/landingPage/Testimonial";
+import Why from "../components/landingPage/Why";
 
 export default function Home(){
     return(

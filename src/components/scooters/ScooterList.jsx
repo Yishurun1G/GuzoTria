@@ -1,5 +1,5 @@
 
-import mockScooters from "../api/MockScooter"
+import mockScooters from "../../api/MockScooter.js"
 import ScooterCard from "./ScooterCard";
 
 function ScooterList() {
