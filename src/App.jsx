@@ -11,6 +11,7 @@ import Login from './pages/Login.jsx';
 
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import Chatbot from './pages/Chatbot.jsx';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/chatbot" element={<Chatbot />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/location" element={<Location />} />
         <Route path="/scooters" element={<Scooters />} />
