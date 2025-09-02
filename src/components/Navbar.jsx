@@ -8,7 +8,7 @@ function NavbarLinks({isOpen}){
   const links = [
     {name: "About us", to: "/about"},
     {name: "Scooters", to: "/scooters"},
-    {name: "Locations", to: "/locations"},
+    {name: "Locations", to: "/location"},
     {name: "Blog", to: "/blog"},
     
   ]
