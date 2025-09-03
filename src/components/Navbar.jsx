@@ -72,7 +72,7 @@ export default function Navbar() {
           <ul className="hidden lg:flex items-center gap-[2rem] text-xl xl:gap-[3rem] xl:text-2xl">
             <NavbarLinks />
             <NavLink to="/signup">
-                <Button name="Sign up" type="primary" textSize="text-2xl" />
+                <Button name="Sign up" type="primary" textSize="text-2xl" link="signup" />
             </NavLink>
           </ul>
 

@@ -22,7 +22,7 @@ export default function Explore() {
 
           {/* Button */}
           <div>
-            <Button name="Start riding today" />
+            <Button name="Start riding today" link="signup" />
           </div>
         </div>
       </div>

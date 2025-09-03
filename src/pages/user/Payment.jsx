@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 function PaymentType({type, Icon, onClick, active}){
   return(
     <div 
-    className={`flex items-center justify-around gap-2 bg-[#0000BD] text-lg font-bold px-4 py-2 rounded-lg cursor-pointer ${active ? "bg-[#0000BD] text-white" : "bg-transparent text-white/70 hover:bg-[#0000BD]/50"}`} onClick={onClick}>
+      className={`flex items-center justify-around gap-2 bg-[#0000BD] text-lg font-bold px-4 py-2 rounded-lg cursor-pointer ${active ? "bg-[#0000BD] text-white" : "bg-transparent text-white/70 hover:bg-[#0000BD]/50"}`} onClick={onClick}>
       <Icon />
       <h2>{type}</h2>
     </div>

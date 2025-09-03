@@ -29,6 +29,7 @@ export default function Hero({ children }) {
               textSize="text-2xl"
               font="font-semibold"
               padding="py-4 px-8"
+              link="/login"
             />
             <Button
               name="Find Nearby Stations"
@@ -36,6 +37,7 @@ export default function Hero({ children }) {
               textSize="text-2xl"
               font="font-semibold"
               padding="py-4 px-8"
+              link="/location"
             />
           </div>
         </div>

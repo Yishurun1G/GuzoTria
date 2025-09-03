@@ -1,4 +1,6 @@
-function Button({name="Click Me", type="primary", textSize="text-base", padding="py-2 px-4", font="font-normal", block=""}){
+import { Link } from "react-router-dom";
+
+function Button({name="Click Me", type="primary", textSize="text-base", padding="py-2 px-4", font="font-normal", block="", link=""}){
   let bgColor, textColor;
 
   switch (type) {
@@ -20,10 +22,13 @@ function Button({name="Click Me", type="primary", textSize="text-base", padding=
   }
 
   return (
-    <button
-    className={`${bgColor} ${textColor} ${textSize} ${padding} ${font} ${block} rounded-lg transition cursor-pointer`}>
-      {name}
-    </button>
+    <Link to={link}>
+      <button
+        className={`${bgColor} ${textColor} ${textSize} ${padding} ${font} ${block} rounded-lg transition cursor-pointer`}>          
+          {name}
+      </button>
+    </Link>
+    
   );
 }
 

@@ -25,7 +25,7 @@ function PricingList({ lists, plan, amount }) {
       <PricingListDetails lists={lists} />
 
       <div className="mt-7">
-        <Button name="Choose Plan" block="w-full" />
+        <Button name="Choose Plan" block="w-full" link="/login" />
       </div>
     </div>
   );
