@@ -1,35 +1,53 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaBicycle, FaBars, FaTimes } from "react-icons/fa";
 
 import Button from "./Button";
 
-function NavbarLinks({isOpen}){
+function NavbarLinks({ isOpen }) {
   const links = [
-    {name: "About us", to: "/about"},
-    {name: "Scooters", to: "/scooters"},
-    {name: "Locations", to: "/location"},
-    {name: "Blog", to: "/blog"},
-    
-  ]
+    { name: "About us", to: "/about" },
+    { name: "Scooters", to: "/scooters" },
+    { name: "Locations", to: "/location" },
+    { name: "Blog", to: "/blog" },
+  ];
 
-  return(
+  return (
     <>
-      { 
-        links.map((link, index) => (
-          <li className={`hover:text-[var(--secondary-color-light)] ${isOpen ? "last:mb-5" : ""} transition-all cursor-pointer`} key={index}>
-            <NavLink to={link.to}>{link.name}</NavLink>
-          </li>
-        ))
-      }
+      {links.map((link, index) => (
+        <li
+          className={`hover:text-[var(--secondary-color-light)] ${
+            isOpen ? "last:mb-5" : ""
+          } transition-all cursor-pointer`}
+          key={index}
+        >
+          <NavLink to={link.to}>{link.name}</NavLink>
+        </li>
+      ))}
     </>
-  )
+  );
 }
 
 /* ==================================== Navbar Start ==================================== */
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  // Check login state from localStorage
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+  }, []);
+
+  // Logout handler
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    setIsLoggedIn(false);
+    navigate("/"); // redirect to login page
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,9 +89,19 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="hidden lg:flex items-center gap-[2rem] text-xl xl:gap-[3rem] xl:text-2xl">
             <NavbarLinks />
-            <NavLink to="/signup">
-                <Button name="Sign up" type="primary" textSize="text-2xl" link="signup" />
-            </NavLink>
+
+            {isLoggedIn ? (
+              <button
+                onClick={handleLogout}
+                className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition"
+              >
+                Logout
+              </button>
+            ) : (
+              <NavLink to="/signup">
+                <Button name="Sign up" type="primary" textSize="text-2xl" />
+              </NavLink>
+            )}
           </ul>
 
           {/* Mobile Menu */}
@@ -83,6 +111,18 @@ export default function Navbar() {
             }`}
           >
             <NavbarLinks isOpen={isOpen} />
+            {isLoggedIn ? (
+              <button
+                onClick={handleLogout}
+                className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition"
+              >
+                Logout
+              </button>
+            ) : (
+              <NavLink to="/signup">
+                <Button name="Sign up" type="primary" textSize="text-xl" />
+              </NavLink>
+            )}
           </ul>
         </div>
       </div>
