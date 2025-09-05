@@ -35,8 +35,8 @@ export default function AppPreview() {
 
         {/* ======== Buttons ======== */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-7 mb-16">
-          <Button name="Find a GuzoDot Near You" />
-          <Button name="Take a ride with GuzoDot" />
+          <Button name="Find a GuzoDot Near You" link="/location" />
+          <Button name="Take a ride with GuzoDot" link="/signup" />
         </div>
       </div>
     </section>

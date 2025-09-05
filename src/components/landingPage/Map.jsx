@@ -15,7 +15,7 @@ export default function Why(){
         </div>
 
         <div className="text-center mb-12">
-          <Button name="Find a GuzoDot Near You" />
+          <Button name="Find a GuzoDot Near You" link="/location" />
         </div>
       </div>
     </section>
