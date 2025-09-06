@@ -98,9 +98,13 @@ export default function Navbar() {
                 Logout
               </button>
             ) : (
-              <NavLink to="/signup">
-                <Button name="Sign up" type="primary" textSize="text-2xl" />
-              </NavLink>
+              <NavLink
+  to="/signup"
+  className="inline-block rounded-lg bg-blue-800 px-6 py-2 text-white font-medium shadow-md transition hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+>
+  Sign Up
+</NavLink>
+
             )}
           </ul>
 
