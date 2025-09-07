@@ -17,8 +17,6 @@ import Profile from './pages/user/Profile.jsx';
 import Payment from './pages/user/Payment.jsx';
 
 import ProtectedRoute from './components/ProtectedRoute.jsx';
-// import Navbar from './components/Navbar.jsx';
-// import Footer from './components/Footer.jsx';
 
 export default function App() {
   return (

@@ -7,7 +7,7 @@ export default function MyLogin() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e){
     e.preventDefault();
 
     const validEmail = "test@gmail.com";
@@ -76,9 +76,9 @@ export default function MyLogin() {
           </button>
         </form>
 
-        {/* Extra Info */}
+        {/* Sign Up Navigation */}
         <p className="mt-6 text-center text-lg text-gray-700">
-          Don’t have an account?{" "}
+          Don't have an account?{" "}
           <span
             onClick={() => navigate("/signup")}
             className="text-blue-600 font-bold hover:underline cursor-pointer"
