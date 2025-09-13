@@ -9,6 +9,7 @@ import Scooters from './pages/Scooters.jsx';
 import Signup from './pages/Signup.jsx';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import MyRide from './components/MyRide.jsx';
 
 export default function App() {
   return (
@@ -23,6 +24,8 @@ export default function App() {
         <Route path="/scooters" element={<Scooters />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="MyRide" element={<MyRide />} />
+        
       </Routes>
       <Footer/>
     </BrowserRouter>

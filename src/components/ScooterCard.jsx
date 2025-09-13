@@ -10,6 +10,7 @@ function ScooterCard({ scooter, userLoggedIn }) {
 
   const handleRentNow = () => {
     if (userLoggedIn) {
+
       console.log("Start booking for", scooter.name);
     } else {
       navigate("/login");
