@@ -98,13 +98,12 @@
 
 
 
-
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaBicycle, FaBars, FaTimes } from "react-icons/fa";
+import { FaBicycle, FaBars, FaTimes, FaUser, FaCog, FaSignOutAlt } from "react-icons/fa";
 import Button from "./Button";
 
-function NavbarLinks({ isOpen, isLoggedIn, handleLogout }) {
+function NavbarLinks({ isOpen, isLoggedIn }) {
   // Links for guest users (before login)
   const guestLinks = [
     { name: "About us", to: "/about" },
@@ -143,18 +142,42 @@ function NavbarLinks({ isOpen, isLoggedIn, handleLogout }) {
           </NavLink>
         </li>
       ))}
-
-      {isLoggedIn && (
-        <li>
-          <button
-            onClick={handleLogout}
-            className="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600 transition"
-          >
-            Logout
-          </button>
-        </li>
-      )}
     </>
+  );
+}
+
+function ProfileDropdown({ isOpen, onClose, handleLogout, navigate }) {
+  const handleSettingsClick = () => {
+    navigate("/profile");
+    onClose();
+  };
+
+  const handleLogoutClick = () => {
+    handleLogout();
+    onClose();
+  };
+
+  return (
+    <div className={`absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${
+      isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+    }`}>
+      <div className="py-2">
+        <button
+          onClick={handleSettingsClick}
+          className="w-full px-4 py-3 text-left text-gray-700 hover:bg-gray-100 flex items-center gap-3 transition-colors"
+        >
+          <FaCog className="text-gray-500" />
+          Settings
+        </button>
+        <button
+          onClick={handleLogoutClick}
+          className="w-full px-4 py-3 text-left text-red-600 hover:bg-red-50 flex items-center gap-3 transition-colors"
+        >
+          <FaSignOutAlt className="text-red-500" />
+          Logout
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -164,6 +187,7 @@ export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("isLoggedIn") === "true"
   );
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -176,6 +200,18 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close profile dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isProfileOpen && !event.target.closest('.profile-dropdown-container')) {
+        setIsProfileOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isProfileOpen]);
 
   // Logout functionality
   const handleLogout = () => {
@@ -212,7 +248,7 @@ export default function Navbar() {
               isLoggedIn={isLoggedIn}
               handleLogout={handleLogout}
             />
-            {!isLoggedIn && (
+            {!isLoggedIn ? (
               <NavLink to="/signup">
                 <Button
                   name="Sign up"
@@ -221,6 +257,21 @@ export default function Navbar() {
                   link="signup"
                 />
               </NavLink>
+            ) : (
+              <li className="relative profile-dropdown-container">
+                <button
+                  onClick={() => setIsProfileOpen(!isProfileOpen)}
+                  className="flex items-center gap-2 p-2 rounded-full hover:bg-white/10 transition-colors"
+                >
+                  <FaUser className="text-2xl" />
+                </button>
+                <ProfileDropdown
+                  isOpen={isProfileOpen}
+                  onClose={() => setIsProfileOpen(false)}
+                  handleLogout={handleLogout}
+                  navigate={navigate}
+                />
+              </li>
             )}
           </ul>
 
@@ -235,7 +286,7 @@ export default function Navbar() {
               isLoggedIn={isLoggedIn}
               handleLogout={handleLogout}
             />
-            {!isLoggedIn && (
+            {!isLoggedIn ? (
               <NavLink to="/signup">
                 <Button
                   name="Sign up"
@@ -244,6 +295,15 @@ export default function Navbar() {
                   link="signup"
                 />
               </NavLink>
+            ) : (
+              <li className="w-full flex flex-col items-center gap-4">
+                <button
+                  onClick={handleLogout}
+                  className="bg-red-500 text-white px-6 py-3 rounded-xl hover:bg-red-600 transition w-full max-w-xs"
+                >
+                  Logout
+                </button>
+              </li>
             )}
           </ul>
         </div>
