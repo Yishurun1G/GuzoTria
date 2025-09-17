@@ -17,6 +17,8 @@ import Profile from './pages/user/Profile.jsx';
 import Payment from './pages/user/Payment.jsx';
 
 import ProtectedRoute from './components/ProtectedRoute.jsx';
+import AdminDashboard from './components/admin/AdminDashboard.jsx';
+import AdminScooters from './components/admin/AdminScooter.jsx';
 // import Navbar from './components/Navbar.jsx';
 // import Footer from './components/Footer.jsx';
 
@@ -62,6 +64,21 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Profile />
+            </ProtectedRoute>
+          }
+        />
+        {/* Admin Protected Routes */}
+         <Route path="/admin/dashboard"
+          element={
+            <ProtectedRoute requireAdmin={true}>
+              <AdminDashboard/>
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/admin/scooters"
+          element={
+            <ProtectedRoute requireAdmin={true}>
+              <AdminScooters />
             </ProtectedRoute>
           }
         />
