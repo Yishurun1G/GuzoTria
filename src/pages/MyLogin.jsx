@@ -50,27 +50,18 @@ export default function MyLogin() {
 
         {/* Login Form */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
+          <input type="email" placeholder="Enter your email" value={email} required
             onChange={(e) => setEmail(e.target.value)}
-            required
             className="border border-gray-300 rounded-xl p-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
-          <input
-            type="password"
-            placeholder="Enter your password"
-            value={password}
+          <input type="password" placeholder="Enter your password" value={password} required
             onChange={(e) => setPassword(e.target.value)}
-            required
             className="border border-gray-300 rounded-xl p-4 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
 
-          <button
-            type="submit"
-            className="bg-blue-600 text-white py-4 rounded-xl text-xl font-semibold hover:bg-blue-700 transition duration-300"
+          <button type="submit"
+            className="bg-blue-600 text-white py-4 rounded-xl text-xl font-semibold hover:bg-blue-700 transition duration-300 cursor-pointer"
           >
             Login
           </button>
@@ -90,3 +81,5 @@ export default function MyLogin() {
     </div>
   );
 }
+
+// Testing@12345

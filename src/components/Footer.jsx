@@ -32,7 +32,7 @@ function FooterAccordionItem({title, items}){
 function FooterSocials({Icon, color="#000000"}){
   return(
     <button>
-      <Icon className="bg-white p-2 rounded-full cursor-pointer" style={{color}} />
+      <Icon className="bg-white p-2 rounded-full cursor-pointer transition-all duration-200 hover:scale-[1.2]" style={{color}} />
     </button>
   )
 }
