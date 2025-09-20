@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import AdminLayout from "./AdminLayout";
+import AdminLayout from "../../components/admin/AdminLayout";
 import { 
   FaMapMarkerAlt, 
   FaPlus, 

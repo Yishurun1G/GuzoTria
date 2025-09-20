@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import AdminLayout from "./AdminLayout";
+import AdminLayout from "../../components/admin/AdminLayout";
 import { FaPlus, FaEdit, FaTrash, FaEye, FaBatteryFull, FaBatteryThreeQuarters, FaBatteryHalf, FaBatteryQuarter, 
   FaBatteryEmpty, FaMapMarkerAlt, FaClock, FaDollarSign, FaWrench, FaTimes } from "react-icons/fa";
 

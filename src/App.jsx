@@ -20,12 +20,12 @@ import Profile from './pages/user/Profile.jsx';
 import Payment from './pages/user/Payment.jsx';
 
 // Admin Pages
-import AdminDashboard from './components/admin/AdminDashboard.jsx';
-import AdminScooters from './components/admin/AdminScooter.jsx';
-import AdminUserAndPartner from './components/admin/AdminUserAndPartner.jsx';
-import AdminLocations from './components/admin/AdminLocations.jsx';
-import AdminAnalytics from './components/admin/AdminAnalytics.jsx';
-import AdminSettings from './components/admin/AdminSettings.jsx';
+import AdminDashboard from './pages/admin/AdminDashboard.jsx';
+import AdminScooters from './pages/admin/AdminScooter.jsx';
+import AdminUserAndPartner from './pages/admin/AdminUserAndPartner.jsx';
+import AdminLocations from './pages/admin/AdminLocations.jsx';
+import AdminAnalytics from './pages/admin/AdminAnalytics.jsx';
+import AdminSettings from './pages/admin/AdminSettings.jsx';
 
 export default function App() {
   return (

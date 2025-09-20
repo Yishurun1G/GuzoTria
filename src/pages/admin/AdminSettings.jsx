@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AdminLayout from "./AdminLayout";
+import AdminLayout from "../../components/admin/AdminLayout";
 import { 
   FaUser, 
   FaEnvelope, 
