@@ -13,6 +13,16 @@ export default function MyLogin() {
     const validEmail = "test@gmail.com";
     const validPassword = "123456";
 
+    // Admin credentials
+    const adminEmail = "admin@guzo.com";
+    const adminPassword = "admin123";
+
+    if (email === adminEmail && password === adminPassword) {
+      localStorage.setItem("isAdminLoggedIn", "true");
+      localStorage.removeItem("isLoggedIn");
+      navigate("/admin/dashboard"); 
+    }
+
     if (email === validEmail && password === validPassword) {
       localStorage.setItem("isLoggedIn", "true");
       navigate("/dashboard"); // redirect to dashboard
