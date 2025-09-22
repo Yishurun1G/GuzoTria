@@ -12,7 +12,7 @@ export default function Payment() {
 
   const rideId = searchParams.get("rideId"); // get ?rideId=123
 
-  // ✅ Fetch ride details
+  // Fetch ride details
   useEffect(() => {
     async function fetchRide() {
       try {
@@ -37,7 +37,7 @@ export default function Payment() {
     fetchRide();
   }, [rideId]);
 
-  // ✅ Start payment with Chapa
+  // Start payment with Chapa
   async function handlePayment() {
     if (!rideId) {
       alert("Ride not found. Please try again.");
@@ -59,7 +59,7 @@ export default function Payment() {
       const data = await res.json();
 
       if (res.ok && data?.data?.checkout_url) {
-        // ✅ Redirect to Chapa checkout page
+        // Redirect to Chapa checkout page
         window.location.href = data.data.checkout_url;
       } else {
         setError("Payment initialization failed");
@@ -73,7 +73,7 @@ export default function Payment() {
     }
   }
 
-  // ✅ Check payment status after redirect (success/failure page)
+  // Check payment status after redirect (success/failure page)
   useEffect(() => {
     async function checkPaymentStatus() {
       const status = searchParams.get("status"); // e.g. ?status=success
